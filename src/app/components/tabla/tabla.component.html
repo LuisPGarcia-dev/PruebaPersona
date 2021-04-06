@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+        <tr>
+           <th *ngFor=" let head of headersList">{{ head }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let element of informationList">
+        <td>{{ element.first }}</td>
+        <td>{{ element.last }}</td>
+        <td>{{ element.email }}</td>
+        <td>{{ element.address }}</td>
+        <td>{{ element.created }}</td>
+        <td>{{ element.balance }}</td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    
+    <input type="name" class="form-control" id="name"  placeholder="Enter name"  [(ngModel)]="name">
+    <br>
+    <button type="button" class="btn btn-primary" (click)="onSave()">Guardar</button>
+  </div>
